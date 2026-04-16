@@ -1,156 +1,80 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 130" width="100%">
   <style>
-    @keyframes walkRight {
-      0%   { transform: translateX(0px); }
-      100% { transform: translateX(820px); }
-    }
-    @keyframes shoot {
-      0%   { opacity: 1; transform: translateX(0px); }
-      100% { opacity: 0; transform: translateX(90px); }
-    }
-    @keyframes fall1 { 0%,72%  { transform: scaleY(1); opacity: 1; } 75%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
-    @keyframes fall2 { 0%,57%  { transform: scaleY(1); opacity: 1; } 60%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
-    @keyframes fall3 { 0%,42%  { transform: scaleY(1); opacity: 1; } 45%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
-    @keyframes fall4 { 0%,27%  { transform: scaleY(1); opacity: 1; } 30%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
-    @keyframes fall5 { 0%,12%  { transform: scaleY(1); opacity: 1; } 15%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
-    @keyframes explode {
-      0%   { transform: scale(0); opacity: 1; }
-      50%  { transform: scale(1.4); opacity: 0.8; }
-      100% { transform: scale(2); opacity: 0; }
-    }
-    @keyframes exp1 { 0%,71%  { opacity:0; transform:scale(0); } 72% { opacity:1; transform:scale(0); } 80%,100% { opacity:0; transform:scale(2); } }
-    @keyframes exp2 { 0%,56%  { opacity:0; transform:scale(0); } 57% { opacity:1; transform:scale(0); } 65%,100% { opacity:0; transform:scale(2); } }
-    @keyframes exp3 { 0%,41%  { opacity:0; transform:scale(0); } 42% { opacity:1; transform:scale(0); } 50%,100% { opacity:0; transform:scale(2); } }
-    @keyframes exp4 { 0%,26%  { opacity:0; transform:scale(0); } 27% { opacity:1; transform:scale(0); } 35%,100% { opacity:0; transform:scale(2); } }
-    @keyframes exp5 { 0%,11%  { opacity:0; transform:scale(0); } 12% { opacity:1; transform:scale(0); } 20%,100% { opacity:0; transform:scale(2); } }
-    @keyframes bullet1 { 0%,70%  { opacity:0; transform:translateX(0); } 71% { opacity:1; } 74%,100% { opacity:0; transform:translateX(70px); } }
-    @keyframes bullet2 { 0%,55%  { opacity:0; transform:translateX(0); } 56% { opacity:1; } 59%,100% { opacity:0; transform:translateX(70px); } }
-    @keyframes bullet3 { 0%,40%  { opacity:0; transform:translateX(0); } 41% { opacity:1; } 44%,100% { opacity:0; transform:translateX(70px); } }
-    @keyframes bullet4 { 0%,25%  { opacity:0; transform:translateX(0); } 26% { opacity:1; } 29%,100% { opacity:0; transform:translateX(70px); } }
-    @keyframes bullet5 { 0%,10%  { opacity:0; transform:translateX(0); } 11% { opacity:1; } 14%,100% { opacity:0; transform:translateX(70px); } }
-    @keyframes muzzle {
-      0%,9%  { opacity:0; } 10%,11% { opacity:1; } 12%,24% { opacity:0; }
-      25%,26% { opacity:1; } 27%,39% { opacity:0; }
-      40%,41% { opacity:1; } 42%,54% { opacity:0; }
-      55%,56% { opacity:1; } 57%,69% { opacity:0; }
-      70%,71% { opacity:1; } 72%,100% { opacity:0; }
-    }
-    @keyframes legL {
-      0%,100%  { transform: rotate(0deg); }
-      25%      { transform: rotate(18deg); }
-      75%      { transform: rotate(-18deg); }
-    }
-    @keyframes legR {
-      0%,100%  { transform: rotate(0deg); }
-      25%      { transform: rotate(-18deg); }
-      75%      { transform: rotate(18deg); }
-    }
-    @keyframes kills {
-      0%,9%   { content:"0"; }
-      10%,24% { content:"1"; }
-      25%,39% { content:"2"; }
-      40%,54% { content:"3"; }
-      55%,69% { content:"4"; }
-      70%,100%{ content:"5"; }
-    }
+    @keyframes walkRight { 0% { transform: translateX(0px); } 100% { transform: translateX(820px); } }
+@keyframes legL { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(18deg); } 75% { transform: rotate(-18deg); } }
+@keyframes legR { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(-18deg); } 75% { transform: rotate(18deg); } }
+.repo-label { font: bold 8px monospace; fill: #aaa; }
+.counter-label { font: bold 9px monospace; fill: #666; letter-spacing:1px; }
+.counter-num { font: bold 20px monospace; fill: #c9a84c; }
+.title-txt { font: bold 13px monospace; fill: #c9a84c; letter-spacing:2px; }
 
-    .scene-bg   { fill: #0a0a0a; }
-    .ground     { stroke: #2a2a2a; stroke-width: 1; }
-    .repo-box   { rx: 4; }
-    .repo-label { font: bold 8px monospace; fill: #aaa; }
-    .repo-icon  { font: 12px serif; }
-    .counter-label { font: bold 9px monospace; fill: #666; letter-spacing:1px; }
-    .counter-num   { font: bold 20px monospace; fill: #c9a84c; }
-    .title-txt  { font: bold 13px monospace; fill: #c9a84c; letter-spacing:2px; }
+    @keyframes fall1 {
+      0%, 12% { transform: scaleY(1); opacity: 1; }
+      13%, 100% { transform: scaleY(0); opacity: 0; }
+    }
+  
+
+    @keyframes exp1 {
+      0%, 12% { opacity: 0; transform: scale(0); }
+      13% { opacity: 1; transform: scale(0); }
+      19%, 100% { opacity: 0; transform: scale(2); }
+    }
+  
+
+    @keyframes bullet1 {
+      0%, 9% { opacity: 0; transform: translateX(0px); }
+      10% { opacity: 1; transform: translateX(0px); }
+      11% { opacity: 1; transform: translateX(76px); }
+      12%, 100% { opacity: 0; transform: translateX(76px); }
+    }
+  
+
+    @keyframes muzzle1 {
+      0%, 9% { opacity: 0; }
+      10% { opacity: 1; }
+      11%, 100% { opacity: 0; }
+    }
+  
   </style>
 
-  <!-- Background -->
   <rect width="900" height="130" fill="#0a0a0a" rx="12"/>
-
-  <!-- Header text -->
   <text x="16" y="18" class="title-txt">// JOHN WICK · ELIMINATING REPOS</text>
-
-  <!-- Kill counter -->
   <text x="780" y="18" class="counter-label">KILLS</text>
-  <text x="840" y="18" class="counter-num" id="kn">0</text>
+  <text x="840" y="18" class="counter-num">1</text>
 
-  <!-- Ground line -->
-  <line x1="0" y1="112" x2="900" y2="112" class="ground"/>
+  <line x1="0" y1="112" x2="900" y2="112" stroke="#2a2a2a" stroke-width="1"/>
 
-  <!-- REPOS (5 repos, da direita pra esquerda) -->
-  <!-- Repo 5 (mais à direita) -->
-  <g style="animation: fall5 15s linear infinite; transform-origin: 770px 112px;">
-    <rect x="740" y="78" width="64" height="34" fill="#0d1117" stroke="#7ec8e3" stroke-width="1" rx="4"/>
-    <text x="772" y="92" text-anchor="middle" style="font:10px monospace;fill:#7ec8e3;">📁</text>
-    <text x="772" y="107" text-anchor="middle" class="repo-label">projects</text>
-  </g>
-  <!-- Explosion 5 -->
-  <circle cx="772" cy="95" r="18" fill="#ff6600" style="animation: exp5 15s linear infinite; transform-origin: 772px 95px; opacity:0;"/>
+  
+    <g style="animation: fall1 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
+      <rect x="740" y="78" width="64" height="34" fill="#0d1117" stroke="#7ec8e3" stroke-width="1" rx="4"/>
+      <text x="772" y="92" text-anchor="middle" style="font:10px monospace;fill:#7ec8e3;">📁</text>
+      <text x="772" y="107" text-anchor="middle" class="repo-label">juliocms…</text>
+    </g>
+    <circle cx="772" cy="95" r="18" fill="#ff6600"
+      style="animation: exp1 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
+  
 
-  <!-- Repo 4 -->
-  <g style="animation: fall4 15s linear infinite; transform-origin: 620px 112px;">
-    <rect x="590" y="78" width="64" height="34" fill="#0d1117" stroke="#a8cc8c" stroke-width="1" rx="4"/>
-    <text x="622" y="92" text-anchor="middle" style="font:10px monospace;fill:#a8cc8c;">📁</text>
-    <text x="622" y="107" text-anchor="middle" class="repo-label">api-rest</text>
-  </g>
-  <circle cx="622" cy="95" r="18" fill="#ff6600" style="animation: exp4 15s linear infinite; transform-origin: 622px 95px; opacity:0;"/>
-
-  <!-- Repo 3 -->
-  <g style="animation: fall3 15s linear infinite; transform-origin: 470px 112px;">
-    <rect x="440" y="78" width="64" height="34" fill="#0d1117" stroke="#e06c75" stroke-width="1" rx="4"/>
-    <text x="472" y="92" text-anchor="middle" style="font:10px monospace;fill:#e06c75;">📁</text>
-    <text x="472" y="107" text-anchor="middle" class="repo-label">portfolio</text>
-  </g>
-  <circle cx="472" cy="95" r="18" fill="#ff6600" style="animation: exp3 15s linear infinite; transform-origin: 472px 95px; opacity:0;"/>
-
-  <!-- Repo 2 -->
-  <g style="animation: fall2 15s linear infinite; transform-origin: 320px 112px;">
-    <rect x="290" y="78" width="64" height="34" fill="#0d1117" stroke="#c9a84c" stroke-width="1" rx="4"/>
-    <text x="322" y="92" text-anchor="middle" style="font:10px monospace;fill:#c9a84c;">📁</text>
-    <text x="322" y="107" text-anchor="middle" class="repo-label">estudos</text>
-  </g>
-  <circle cx="322" cy="95" r="18" fill="#ff6600" style="animation: exp2 15s linear infinite; transform-origin: 322px 95px; opacity:0;"/>
-
-  <!-- Repo 1 (mais à esquerda) -->
-  <g style="animation: fall1 15s linear infinite; transform-origin: 170px 112px;">
-    <rect x="140" y="78" width="70" height="34" fill="#0d1117" stroke="#c084fc" stroke-width="1" rx="4"/>
-    <text x="175" y="92" text-anchor="middle" style="font:10px monospace;fill:#c084fc;">📁</text>
-    <text x="175" y="107" text-anchor="middle" class="repo-label">dev-tools</text>
-  </g>
-  <circle cx="175" cy="95" r="18" fill="#ff6600" style="animation: exp1 15s linear infinite; transform-origin: 175px 95px; opacity:0;"/>
-
-  <!-- JOHN WICK figure (walks from left to right) -->
-  <g style="animation: walkRight 15s linear infinite;">
-    <!-- Body (terno preto) -->
+  <g style="animation: walkRight 15s linear infinite; transform-box: fill-box; transform-origin: 0 0;">
     <rect x="18" y="72" width="14" height="20" fill="#111" rx="2"/>
-    <!-- Cabeça -->
     <circle cx="25" cy="65" r="8" fill="#e8d5b0"/>
-    <!-- Cabelo -->
     <rect x="18" y="58" width="14" height="5" fill="#1a0a00" rx="2"/>
-    <!-- Olhos -->
     <rect x="21" y="63" width="2" height="2" fill="#222" rx="1"/>
     <rect x="27" y="63" width="2" height="2" fill="#222" rx="1"/>
-    <!-- Gravata -->
     <rect x="23" y="72" width="4" height="14" fill="#c9a84c" rx="1"/>
-    <!-- Braço direito + pistola -->
     <rect x="32" y="74" width="12" height="4" fill="#111" rx="1"/>
     <rect x="42" y="72" width="10" height="7" fill="#555" rx="1"/>
     <rect x="50" y="73" width="5" height="3" fill="#333" rx="1"/>
-    <!-- Muzzle flash -->
-    <polygon points="55,73 62,75 55,77" fill="#ffdd44" style="animation: muzzle 15s linear infinite; opacity:0;"/>
-    <!-- Perna esquerda -->
+    <polygon points="55,73 62,75 55,77" fill="#ffdd44" style="animation: muzzle1 15s linear infinite; opacity:0;"/>
     <rect x="19" y="91" width="6" height="21" fill="#0d0d0d" rx="2" style="animation: legL 0.4s linear infinite; transform-origin: 22px 91px;"/>
-    <!-- Perna direita -->
     <rect x="27" y="91" width="6" height="21" fill="#0d0d0d" rx="2" style="animation: legR 0.4s linear infinite; transform-origin: 30px 91px;"/>
+
+    
+    <rect x="58" y="75" width="12" height="2" rx="1" fill="#c9a84c"
+      style="animation: bullet1 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
+    <circle cx="62" cy="76" r="4" fill="#ffdd44"
+      style="animation: muzzle1 15s linear infinite; opacity:0;"/>
+  
   </g>
 
-  <!-- BULLETS -->
-  <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet5 15s linear infinite; opacity:0;"/>
-  <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet4 15s linear infinite; opacity:0;"/>
-  <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet3 15s linear infinite; opacity:0;"/>
-  <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet2 15s linear infinite; opacity:0;"/>
-  <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet1 15s linear infinite; opacity:0;"/>
-
-  <!-- Footer -->
   <text x="16" y="126" style="font:8px monospace;fill:#333;letter-spacing:1px;">juliocmsantos-dev · github.com/juliocmsantos-dev · updated by github actions</text>
 </svg>
