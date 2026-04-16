@@ -1,0 +1,129 @@
+name: 🔫 John Wick Kills Repos
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # Atualiza a cada 6 horas
+  workflow_dispatch:          # Permite rodar manualmente
+  push:
+    branches: [main]          # Roda a cada push
+
+jobs:
+  generate-wick-svg:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Gerar SVG com repos reais
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            // Busca os 5 repos mais recentes do usuário
+            const { data: repos } = await github.rest.repos.listForAuthenticatedUser({
+              sort: 'updated',
+              per_page: 5,
+              type: 'owner'
+            });
+
+            const repoNames = repos.map(r => r.name);
+            const colors = ['#7ec8e3', '#a8cc8c', '#e06c75', '#c9a84c', '#c084fc'];
+
+            // Gera os blocos de repos no SVG
+            const positions = [740, 590, 440, 290, 140];
+            const widths    = [64,  64,  64,  64,  70];
+            const centers   = [772, 622, 472, 322, 175];
+
+            const repoBlocks = repoNames.map((name, i) => {
+              const shortName = name.length > 9 ? name.slice(0, 8) + '…' : name;
+              const fallAnim  = `fall${5 - i}`;
+              const expAnim   = `exp${5 - i}`;
+              const cx        = centers[i];
+              const px        = positions[i];
+              const w         = widths[i];
+              const color     = colors[i];
+              return `
+              <g style="animation: ${fallAnim} 15s linear infinite; transform-origin: ${cx}px 112px;">
+                <rect x="${px}" y="78" width="${w}" height="34" fill="#0d1117" stroke="${color}" stroke-width="1" rx="4"/>
+                <text x="${cx}" y="92" text-anchor="middle" style="font:10px monospace;fill:${color};">📁</text>
+                <text x="${cx}" y="107" text-anchor="middle" class="repo-label">${shortName}</text>
+              </g>
+              <circle cx="${cx}" cy="95" r="18" fill="#ff6600"
+                style="animation: ${expAnim} 15s linear infinite; transform-origin: ${cx}px 95px; opacity:0;"/>`;
+            }).join('\n');
+
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 130" width="100%">
+              <style>
+                @keyframes walkRight { 0% { transform: translateX(0px); } 100% { transform: translateX(820px); } }
+                @keyframes fall1 { 0%,72%  { transform: scaleY(1); opacity: 1; } 75%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
+                @keyframes fall2 { 0%,57%  { transform: scaleY(1); opacity: 1; } 60%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
+                @keyframes fall3 { 0%,42%  { transform: scaleY(1); opacity: 1; } 45%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
+                @keyframes fall4 { 0%,27%  { transform: scaleY(1); opacity: 1; } 30%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
+                @keyframes fall5 { 0%,12%  { transform: scaleY(1); opacity: 1; } 15%,100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; } }
+                @keyframes exp1  { 0%,71%  { opacity:0; transform:scale(0); } 72%  { opacity:1; transform:scale(0); } 80%,100% { opacity:0; transform:scale(2); } }
+                @keyframes exp2  { 0%,56%  { opacity:0; transform:scale(0); } 57%  { opacity:1; transform:scale(0); } 65%,100% { opacity:0; transform:scale(2); } }
+                @keyframes exp3  { 0%,41%  { opacity:0; transform:scale(0); } 42%  { opacity:1; transform:scale(0); } 50%,100% { opacity:0; transform:scale(2); } }
+                @keyframes exp4  { 0%,26%  { opacity:0; transform:scale(0); } 27%  { opacity:1; transform:scale(0); } 35%,100% { opacity:0; transform:scale(2); } }
+                @keyframes exp5  { 0%,11%  { opacity:0; transform:scale(0); } 12%  { opacity:1; transform:scale(0); } 20%,100% { opacity:0; transform:scale(2); } }
+                @keyframes bullet1 { 0%,70%  { opacity:0; transform:translateX(0); } 71%  { opacity:1; } 74%,100% { opacity:0; transform:translateX(70px); } }
+                @keyframes bullet2 { 0%,55%  { opacity:0; transform:translateX(0); } 56%  { opacity:1; } 59%,100% { opacity:0; transform:translateX(70px); } }
+                @keyframes bullet3 { 0%,40%  { opacity:0; transform:translateX(0); } 41%  { opacity:1; } 44%,100% { opacity:0; transform:translateX(70px); } }
+                @keyframes bullet4 { 0%,25%  { opacity:0; transform:translateX(0); } 26%  { opacity:1; } 29%,100% { opacity:0; transform:translateX(70px); } }
+                @keyframes bullet5 { 0%,10%  { opacity:0; transform:translateX(0); } 11%  { opacity:1; } 14%,100% { opacity:0; transform:translateX(70px); } }
+                @keyframes muzzle {
+                  0%,9%  { opacity:0; } 10%,11% { opacity:1; } 12%,24% { opacity:0; }
+                  25%,26% { opacity:1; } 27%,39% { opacity:0; }
+                  40%,41% { opacity:1; } 42%,54% { opacity:0; }
+                  55%,56% { opacity:1; } 57%,69% { opacity:0; }
+                  70%,71% { opacity:1; } 72%,100% { opacity:0; }
+                }
+                @keyframes legL { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(18deg); } 75% { transform: rotate(-18deg); } }
+                @keyframes legR { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(-18deg); } 75% { transform: rotate(18deg); } }
+                .repo-label { font: bold 8px monospace; fill: #aaa; }
+                .counter-label { font: bold 9px monospace; fill: #666; letter-spacing:1px; }
+                .counter-num   { font: bold 20px monospace; fill: #c9a84c; }
+                .title-txt     { font: bold 13px monospace; fill: #c9a84c; letter-spacing:2px; }
+              </style>
+              <rect width="900" height="130" fill="#0a0a0a" rx="12"/>
+              <text x="16"  y="18" class="title-txt">// JOHN WICK · ELIMINATING REPOS</text>
+              <text x="780" y="18" class="counter-label">KILLS</text>
+              <text x="840" y="18" class="counter-num">5</text>
+              <line x1="0" y1="112" x2="900" y2="112" stroke="#2a2a2a" stroke-width="1"/>
+              ${repoBlocks}
+              <g style="animation: walkRight 15s linear infinite;">
+                <rect x="18" y="72" width="14" height="20" fill="#111" rx="2"/>
+                <circle cx="25" cy="65" r="8" fill="#e8d5b0"/>
+                <rect x="18" y="58" width="14" height="5" fill="#1a0a00" rx="2"/>
+                <rect x="21" y="63" width="2" height="2" fill="#222" rx="1"/>
+                <rect x="27" y="63" width="2" height="2" fill="#222" rx="1"/>
+                <rect x="23" y="72" width="4" height="14" fill="#c9a84c" rx="1"/>
+                <rect x="32" y="74" width="12" height="4" fill="#111" rx="1"/>
+                <rect x="42" y="72" width="10" height="7" fill="#555" rx="1"/>
+                <rect x="50" y="73" width="5" height="3" fill="#333" rx="1"/>
+                <polygon points="55,73 62,75 55,77" fill="#ffdd44" style="animation: muzzle 15s linear infinite; opacity:0;"/>
+                <rect x="19" y="91" width="6" height="21" fill="#0d0d0d" rx="2" style="animation: legL 0.4s linear infinite; transform-origin: 22px 91px;"/>
+                <rect x="27" y="91" width="6" height="21" fill="#0d0d0d" rx="2" style="animation: legR 0.4s linear infinite; transform-origin: 30px 91px;"/>
+              </g>
+              <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet5 15s linear infinite; opacity:0;"/>
+              <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet4 15s linear infinite; opacity:0;"/>
+              <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet3 15s linear infinite; opacity:0;"/>
+              <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet2 15s linear infinite; opacity:0;"/>
+              <rect x="55" y="76" width="10" height="2" fill="#c9a84c" rx="1" style="animation: bullet1 15s linear infinite; opacity:0;"/>
+              <text x="16" y="126" style="font:8px monospace;fill:#333;letter-spacing:1px;">juliocmsantos-dev · github.com/juliocmsantos-dev · updated by github actions</text>
+            </svg>`;
+
+            fs.mkdirSync('assets', { recursive: true });
+            fs.writeFileSync('assets/john-wick.svg', svg);
+            console.log('SVG gerado com repos:', repoNames);
+
+      - name: Commit e push do SVG
+        run: |
+          git config user.name  "John Wick Bot 🔫"
+          git config user.email "wick@continental.hotel"
+          git add assets/john-wick.svg
+          git diff --staged --quiet || git commit -m "🔫 Wick eliminou mais repos [skip ci]"
+          git push
