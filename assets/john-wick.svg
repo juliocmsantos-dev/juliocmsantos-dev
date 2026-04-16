@@ -24,15 +24,15 @@
     @keyframes bullet1 {
       0%, 9% { opacity: 0; transform: translateX(0px); }
       10% { opacity: 1; transform: translateX(0px); }
-      11% { opacity: 1; transform: translateX(76px); }
-      12%, 100% { opacity: 0; transform: translateX(76px); }
+      11% { opacity: 1; transform: translateX(96px); }
+      12%, 100% { opacity: 0; transform: translateX(96px); }
     }
   
 
     @keyframes muzzle1 {
-      0%, 9% { opacity: 0; }
-      10% { opacity: 1; }
-      11%, 100% { opacity: 0; }
+      0%, 9% { opacity: 0; transform: scale(0.2); }
+      10% { opacity: 1; transform: scale(1); }
+      11%, 100% { opacity: 0; transform: scale(0.2); }
     }
   
   </style>
@@ -69,10 +69,12 @@
     <rect x="27" y="91" width="6" height="21" fill="#0d0d0d" rx="2" style="animation: legR 0.4s linear infinite; transform-origin: 30px 91px;"/>
 
     
-    <rect x="58" y="75" width="12" height="2" rx="1" fill="#c9a84c"
-      style="animation: bullet1 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
-    <circle cx="62" cy="76" r="4" fill="#ffdd44"
-      style="animation: muzzle1 15s linear infinite; opacity:0;"/>
+    <g transform="translate(55,75)">
+      <rect width="12" height="2" rx="1" fill="#c9a84c"
+        style="animation: bullet1 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
+      <circle cx="4" cy="1" r="4" fill="#ffdd44"
+        style="animation: muzzle1 15s linear infinite; opacity:0;"/>
+    </g>
   
   </g>
 
