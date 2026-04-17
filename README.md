@@ -6,7 +6,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=112&color=gradient&customColorList=33&section=header](https://capsule-render.vercel.app/api?type=waving&height=110&color=CE53E0"/>
 
 <div align="center">
-<sub>システム　ア　リスト</sub>
+<sub>システムアナリスト</sub>
 
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Olá%2C+eu+sou+Julio+Santos+👋;Desenvolvedor+em+Formação+🚀;DSM+%7C+Fatec+Cotia+💻;Sempre+Evoluindo+⚡)](https://git.io/typing-svg)
@@ -109,7 +109,7 @@ Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **C
 
 <div align="center">
 
-## 📈 &nbsp; Gráfico de Contribuições
+##  &nbsp; Gráfico de Contribuições
 
 [![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=juliocmsantos-dev&bg_color=0d0d1a&color=a855f7&line=a855f7&point=ffffff&area=true&area_color=a855f722&hide_border=true)](https://github.com/juliocmsantos-dev)
 
@@ -125,13 +125,17 @@ Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **C
 
 <div align="center">
 
-## 🏆 &nbsp; Troféus
+<div align="center">
 
-[![Trophies](https://github-profile-trophy.vercel.app/?username=juliocmsantos-dev&theme=tokyonight&no-frame=true&column=7&margin-w=8)](https://github.com/juliocmsantos-dev)
+##  &nbsp; Currently Learning
 
+<img src="https://img.shields.io/badge/Python-Iniciante-A855F7?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL-Intermediário-A855F7?style=for-the-badge&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/Projetos%20Publicados-3/10-A855F7?style=for-the-badge" />
+
+
+<br/><br/>
 </div>
-
-<br/>
 
 ---
 
