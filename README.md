@@ -20,7 +20,7 @@
 
 <img align="right" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmI3ZmpzZzh5eDh1cmdlN3VpM2kzejlsZzNzcjU5ajJtd202ZHo4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2JeayTXNlTh5CNsQ/giphy.gif" width="220" style="margin-left: 20px; margin-bottom: 10px;"/>
 
-**Olá, eu sou o Julio Santos!**
+**Olá, eu sou o Julio Cesar Mendes Santos!**
 
 Atualmente estou cursando **Desenvolvimento de Sistemas Multiplataforma (DSM)** na Fatec de Cotia — 1º Semestre. Já me formei como técnico em **Desenvolvimento de Sistemas pela Etec** e agora estou levando os estudos para o próximo nível!
 
