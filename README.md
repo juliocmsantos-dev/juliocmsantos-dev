@@ -1,9 +1,13 @@
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <!-- HEADER ANIMADO -->
+
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=112&color=gradient&customColorList=33&section=header](https://capsule-render.vercel.app/api?type=waving&height=110&color=CE53E0"/>
 
 <div align="center">
 <sub>システム　ア　リスト</sub>
+
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Olá%2C+eu+sou+Julio+Santos+👋;Desenvolvedor+em+Formação+🚀;DSM+%7C+Fatec+Cotia+💻;Sempre+Evoluindo+⚡)](https://git.io/typing-svg)
 </div>
@@ -89,7 +93,7 @@ Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **C
 
 <div align="center">
 
-## 🔫 &nbsp; John Wick está eliminando meus repositórios
+##  &nbsp; John Wick está eliminando meus repositórios
 
 ![John Wick elimina repos](https://raw.githubusercontent.com/juliocmsantos-dev/juliocmsantos-dev/main/assets/john-wick.svg)
 
@@ -137,8 +141,12 @@ Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **C
 
 <div align="center">
 
-*"Sim, eu sou o boogeyman."* 🔫
+*"Se você acreditar que uma coisa é impossível, você a tornará impossível. "* Bruce Lee
 
 ![Profile Views](https://komarev.com/ghpvc/?username=juliocmsantos-dev&color=a855f7&style=for-the-badge&label=VISITAS+AO+PERFIL)
+
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&color=CE53E0&section=footer"/>
+
 
 </div>
