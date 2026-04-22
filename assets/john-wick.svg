@@ -35,12 +35,40 @@
       11%, 100% { opacity: 0; transform: scale(0.2); }
     }
   
+
+    @keyframes fall2 {
+      0%, 27% { transform: scaleY(1); opacity: 1; }
+      28%, 100% { transform: scaleY(0); opacity: 0; }
+    }
+  
+
+    @keyframes exp2 {
+      0%, 27% { opacity: 0; transform: scale(0); }
+      28% { opacity: 1; transform: scale(0); }
+      34%, 100% { opacity: 0; transform: scale(2); }
+    }
+  
+
+    @keyframes bullet2 {
+      0%, 24% { opacity: 0; transform: translateX(0px); }
+      25% { opacity: 1; transform: translateX(0px); }
+      26% { opacity: 1; transform: translateX(96px); }
+      27%, 100% { opacity: 0; transform: translateX(96px); }
+    }
+  
+
+    @keyframes muzzle2 {
+      0%, 24% { opacity: 0; transform: scale(0.2); }
+      25% { opacity: 1; transform: scale(1); }
+      26%, 100% { opacity: 0; transform: scale(0.2); }
+    }
+  
   </style>
 
   <rect width="900" height="130" fill="#0a0a0a" rx="12"/>
   <text x="16" y="18" class="title-txt">// JOHN WICK · ELIMINATING REPOS</text>
   <text x="780" y="18" class="counter-label">KILLS</text>
-  <text x="840" y="18" class="counter-num">1</text>
+  <text x="840" y="18" class="counter-num">2</text>
 
   <line x1="0" y1="112" x2="900" y2="112" stroke="#2a2a2a" stroke-width="1"/>
 
@@ -48,10 +76,19 @@
     <g style="animation: fall1 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
       <rect x="740" y="78" width="64" height="34" fill="#0d1117" stroke="#7ec8e3" stroke-width="1" rx="4"/>
       <text x="772" y="92" text-anchor="middle" style="font:10px monospace;fill:#7ec8e3;">📁</text>
-      <text x="772" y="107" text-anchor="middle" class="repo-label">juliocms…</text>
+      <text x="772" y="107" text-anchor="middle" class="repo-label">ubirajar…</text>
     </g>
     <circle cx="772" cy="95" r="18" fill="#ff6600"
       style="animation: exp1 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
+  
+
+    <g style="animation: fall2 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
+      <rect x="590" y="78" width="64" height="34" fill="#0d1117" stroke="#a8cc8c" stroke-width="1" rx="4"/>
+      <text x="622" y="92" text-anchor="middle" style="font:10px monospace;fill:#a8cc8c;">📁</text>
+      <text x="622" y="107" text-anchor="middle" class="repo-label">juliocms…</text>
+    </g>
+    <circle cx="622" cy="95" r="18" fill="#ff6600"
+      style="animation: exp2 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
   
 
   <g style="animation: walkRight 15s linear infinite; transform-box: fill-box; transform-origin: 0 0;">
@@ -74,6 +111,14 @@
         style="animation: bullet1 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
       <circle cx="4" cy="1" r="4" fill="#ffdd44"
         style="animation: muzzle1 15s linear infinite; opacity:0;"/>
+    </g>
+  
+
+    <g transform="translate(55,75)">
+      <rect width="12" height="2" rx="1" fill="#c9a84c"
+        style="animation: bullet2 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
+      <circle cx="4" cy="1" r="4" fill="#ffdd44"
+        style="animation: muzzle2 15s linear infinite; opacity:0;"/>
     </g>
   
   </g>
