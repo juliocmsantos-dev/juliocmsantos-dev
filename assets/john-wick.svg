@@ -76,7 +76,7 @@
     <g style="animation: fall1 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
       <rect x="740" y="78" width="64" height="34" fill="#0d1117" stroke="#7ec8e3" stroke-width="1" rx="4"/>
       <text x="772" y="92" text-anchor="middle" style="font:10px monospace;fill:#7ec8e3;">📁</text>
-      <text x="772" y="107" text-anchor="middle" class="repo-label">ubirajar…</text>
+      <text x="772" y="107" text-anchor="middle" class="repo-label">juliocms…</text>
     </g>
     <circle cx="772" cy="95" r="18" fill="#ff6600"
       style="animation: exp1 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
@@ -85,7 +85,7 @@
     <g style="animation: fall2 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
       <rect x="590" y="78" width="64" height="34" fill="#0d1117" stroke="#a8cc8c" stroke-width="1" rx="4"/>
       <text x="622" y="92" text-anchor="middle" style="font:10px monospace;fill:#a8cc8c;">📁</text>
-      <text x="622" y="107" text-anchor="middle" class="repo-label">juliocms…</text>
+      <text x="622" y="107" text-anchor="middle" class="repo-label">ubirajar…</text>
     </g>
     <circle cx="622" cy="95" r="18" fill="#ff6600"
       style="animation: exp2 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
