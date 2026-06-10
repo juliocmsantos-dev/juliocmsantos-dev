@@ -91,12 +91,40 @@
       41%, 100% { opacity: 0; transform: scale(0.2); }
     }
   
+
+    @keyframes fall4 {
+      0%, 57% { transform: scaleY(1); opacity: 1; }
+      58%, 100% { transform: scaleY(0); opacity: 0; }
+    }
+  
+
+    @keyframes exp4 {
+      0%, 57% { opacity: 0; transform: scale(0); }
+      58% { opacity: 1; transform: scale(0); }
+      64%, 100% { opacity: 0; transform: scale(2); }
+    }
+  
+
+    @keyframes bullet4 {
+      0%, 54% { opacity: 0; transform: translateX(0px); }
+      55% { opacity: 1; transform: translateX(0px); }
+      56% { opacity: 1; transform: translateX(96px); }
+      57%, 100% { opacity: 0; transform: translateX(96px); }
+    }
+  
+
+    @keyframes muzzle4 {
+      0%, 54% { opacity: 0; transform: scale(0.2); }
+      55% { opacity: 1; transform: scale(1); }
+      56%, 100% { opacity: 0; transform: scale(0.2); }
+    }
+  
   </style>
 
   <rect width="900" height="130" fill="#0a0a0a" rx="12"/>
   <text x="16" y="18" class="title-txt">// JOHN WICK · ELIMINATING REPOS</text>
   <text x="780" y="18" class="counter-label">KILLS</text>
-  <text x="840" y="18" class="counter-num">3</text>
+  <text x="840" y="18" class="counter-num">4</text>
 
   <line x1="0" y1="112" x2="900" y2="112" stroke="#2a2a2a" stroke-width="1"/>
 
@@ -122,10 +150,19 @@
     <g style="animation: fall3 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
       <rect x="440" y="78" width="64" height="34" fill="#0d1117" stroke="#e06c75" stroke-width="1" rx="4"/>
       <text x="472" y="92" text-anchor="middle" style="font:10px monospace;fill:#e06c75;">📁</text>
-      <text x="472" y="107" text-anchor="middle" class="repo-label">ubirajar…</text>
+      <text x="472" y="107" text-anchor="middle" class="repo-label">myteache…</text>
     </g>
     <circle cx="472" cy="95" r="18" fill="#ff6600"
       style="animation: exp3 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
+  
+
+    <g style="animation: fall4 15s linear infinite; transform-box: fill-box; transform-origin: center bottom;">
+      <rect x="290" y="78" width="64" height="34" fill="#0d1117" stroke="#c9a84c" stroke-width="1" rx="4"/>
+      <text x="322" y="92" text-anchor="middle" style="font:10px monospace;fill:#c9a84c;">📁</text>
+      <text x="322" y="107" text-anchor="middle" class="repo-label">ubirajar…</text>
+    </g>
+    <circle cx="322" cy="95" r="18" fill="#ff6600"
+      style="animation: exp4 15s linear infinite; transform-box: fill-box; transform-origin: center center; opacity:0;"/>
   
 
   <g style="animation: walkRight 15s linear infinite; transform-box: fill-box; transform-origin: 0 0;">
@@ -164,6 +201,14 @@
         style="animation: bullet3 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
       <circle cx="4" cy="1" r="4" fill="#ffdd44"
         style="animation: muzzle3 15s linear infinite; opacity:0;"/>
+    </g>
+  
+
+    <g transform="translate(55,75)">
+      <rect width="12" height="2" rx="1" fill="#c9a84c"
+        style="animation: bullet4 15s linear infinite; transform-box: fill-box; transform-origin: left center; opacity:0;"/>
+      <circle cx="4" cy="1" r="4" fill="#ffdd44"
+        style="animation: muzzle4 15s linear infinite; opacity:0;"/>
     </g>
   
   </g>
