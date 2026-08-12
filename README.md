@@ -22,9 +22,10 @@
 
 **Olá, eu sou o Julio Cesar Mendes Santos!**
 
-Atualmente estou cursando **Desenvolvimento de Sistemas Multiplataforma (DSM)** na Fatec de Cotia — 2º Semestre. Já me formei como técnico em **Desenvolvimento de Sistemas pela Etec**
+Atualmente estou cursando **Desenvolvimento de Sistemas Multiplataforma (DSM)** na Fatec de Cotia — 
+2º Semestre. Já me formei como técnico em **Desenvolvimento de Sistemas pela Etec**
 
-Minha linguagem principal é **Python 🐍**, minhas stacks atuais são **Java**, **Dart**,**JavaScript***, **HTML**, **CSS**, **SQL** e **SQL Postgres** para banco de dados.
+Minha linguagem principal é **Python 🐍**, minhas stacks atuais são **Java**, **Dart**, **JavaScript**, **HTML**, **CSS**, **SQL** e **SQL Postgres** para banco de dados.
 Frameworks **Flutter**
 
 **Connect with me!**
