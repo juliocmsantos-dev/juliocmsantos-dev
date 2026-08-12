@@ -22,9 +22,10 @@
 
 **Olá, eu sou o Julio Cesar Mendes Santos!**
 
-Atualmente estou cursando **Desenvolvimento de Sistemas Multiplataforma (DSM)** na Fatec de Cotia — 1º Semestre. Já me formei como técnico em **Desenvolvimento de Sistemas pela Etec** e agora estou levando os estudos para o próximo nível!
+Atualmente estou cursando **Desenvolvimento de Sistemas Multiplataforma (DSM)** na Fatec de Cotia — 2º Semestre. Já me formei como técnico em **Desenvolvimento de Sistemas pela Etec**
 
-Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **CSS**, um pouco de **JavaScript**, **SQL** para banco de dados, e já mexi com **Dart** e **Flutter**. Me atualizo na área constantemente, pois adoro aprender e evoluir como desenvolvedor!
+Minha linguagem principal é **Python 🐍**, minhas stacks atuais são **Java**, **Dart**,**JavaScript***, **HTML**, **CSS**, **SQL** e **SQL Postgres** para banco de dados.
+Frameworks **Flutter**
 
 **Connect with me!**
 
@@ -44,11 +45,13 @@ Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **C
 **My Stack**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/logo-javascript-blue?logo=javascript) 
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
@@ -145,7 +148,7 @@ Minha linguagem principal é **Python 🐍**, mas também conheço **HTML**, **C
 
 <div align="center">
 
-*"Se você acreditar que uma coisa é impossível, você a tornará impossível. "* Bruce Lee
+*"Se você acreditar que uma coisa é impossível, você a tornará impossível. "* - Bruce Lee
 
 ![Profile Views](https://komarev.com/ghpvc/?username=juliocmsantos-dev&color=a855f7&style=for-the-badge&label=VISITAS+AO+PERFIL)
 
